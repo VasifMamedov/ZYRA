@@ -1,0 +1,67 @@
+{% from "macros.html" import create_navlink %}
+
+<nav class="navbar navbar-expand-lg border-bottom border-body data-bs-theme=dark" style="background-color: orange">
+    <div class="container-md">
+        <a class="navbar-brand" href="{{ url_for('main.index') }}">ZYRA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                {{ create_navlink('main.index', _('Home')) }}
+                {{ create_navlink('main.about', _('About')) }}
+
+                <!-- Dil Seçici -->
+                <div class="d-flex align-items-center gap-1 me-2">
+                    <a href="/set_language/en"
+                       class="btn btn-sm {{ 'btn-dark' if session.get('lang', 'en') == 'en' else 'btn-outline-dark' }}">
+                        EN
+                    </a>
+                    <a href="/set_language/tr"
+                       class="btn btn-sm {{ 'btn-dark' if session.get('lang') == 'tr' else 'btn-outline-dark' }}">
+                        TR
+                    </a>
+                    <a href="/set_language/ka"
+                       class="btn btn-sm {{ 'btn-dark' if session.get('lang') == 'ka' else 'btn-outline-dark' }}">
+                        KA
+                    </a>
+                </div>
+
+                {% if current_user.is_authenticated %}
+                    {% if current_user.role == 'admin' %}
+                        {{ create_navlink('main.dashboard', _('Dashboard')) }}
+                    {% else %}
+                        {{ create_navlink('main.favorites', _('Favorites')) }}
+                    {% endif %}
+                {% endif %}
+            </ul>
+
+            <!-- Navbar Search -->
+            <form class="d-flex me-3" method="GET" action="{{ url_for('main.index') }}">
+                <div class="input-group">
+                    <input type="text"
+                           name="q"
+                           class="form-control form-control-sm"
+                           placeholder="{{ _('Search products...') }}"
+                           value="{{ request.args.get('q', '') }}">
+                    <button class="btn btn-dark btn-sm" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+
+            <div class="d-flex align-items-center gap-3" role="search">
+                {% if current_user.is_authenticated %}
+                    <span class="fw-semibold text-white bg-dark bg-opacity-25 px-3 py-1 rounded-pill">
+                        👋 {{ current_user.username }}
+                    </span>
+                    <a class="btn btn-danger" href="/logout">{{ _('Logout') }}</a>
+                {% else %}
+                    <a class="btn btn-success" href="/login">{{ _('Login') }}</a>
+                    <a class="btn btn-outline-light" href="/register">{{ _('Register') }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,85 @@
+{% macro create_navlink(endpoint_name, display_name) %}
+    <li class="nav-item">
+        <a class="nav-link {% if request.endpoint == endpoint_name %} active {% endif %}"
+           href="{{ url_for(endpoint_name) }}"
+        >{{ display_name }}</a>
+    </li>
+{% endmacro %}
+
+{% macro create_card(product) %}
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            {% if product.img %}
+                <img src="/static/upload/{{ product.img }}"
+                     class="card-img-top"
+                     style="height: 180px; object-fit: contain; padding: 8px;"
+                     alt="{{ product.name }}">
+            {% else %}
+                <div class="card-img-top d-flex align-items-center justify-content-center bg-light"
+                     style="height: 180px;">
+                    <i class="bi bi-image text-muted" style="font-size: 3rem;"></i>
+                </div>
+            {% endif %}
+            <div class="card-body d-flex flex-column">
+                <h6 class="card-title fw-bold">{{ product.name }}</h6>
+                <p class="card-text text-primary fw-semibold">₾{{ "%.2f"|format(product.price) }}</p>
+
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                    {% set lang = session.get('lang', 'en') %}
+                    {% for category in product.category %}
+                        <span class="badge bg-warning text-dark" style="font-size: 0.7rem;">
+                            {% if lang == 'tr' and category.name_tr %}
+                                {{ category.name_tr }}
+                            {% elif lang == 'ka' and category.name_ka %}
+                                {{ category.name_ka }}
+                            {% else %}
+                                 {{ category.name }}
+                            {% endif %}
+                        </span>
+                    {% endfor %}
+                </div>
+
+                {% if product.reviews %}
+                    {% set avg = (product.reviews | map(attribute='rating') | sum) / product.reviews | length %}
+                    <div class="mb-2 d-flex align-items-center gap-1">
+                        {% for i in range(1, 6) %}
+                            {% if i <= avg %}
+                                <i class="bi bi-star-fill text-warning" style="font-size: 0.75rem;"></i>
+                            {% else %}
+                                <i class="bi bi-star text-warning" style="font-size: 0.75rem;"></i>
+                            {% endif %}
+                        {% endfor %}
+                        <span class="text-muted" style="font-size: 0.75rem;">
+                            ({{ product.reviews | length }})
+                        </span>
+                    </div>
+                {% else %}
+                    <p class="text-muted mb-2" style="font-size: 0.75rem;">{{ _('No reviews yet') }}</p>
+                {% endif %}
+
+                {% if product.stock is not none %}
+                    {% if product.stock > 0 %}
+                        <span class="badge bg-success mb-2" style="width: fit-content;">{{ _('In Stock') }}</span>
+                    {% else %}
+                        <span class="badge bg-danger mb-2" style="width: fit-content;">{{ _('Out of Stock') }}</span>
+                    {% endif %}
+                {% endif %}
+
+                <div class="mt-auto d-flex flex-wrap gap-1">
+                    <a href="/view_product/{{ product.id }}" class="btn btn-primary btn-sm">{{ _('View') }}</a>
+                    {% if current_user.is_authenticated %}
+                        {% if current_user.role == 'admin' %}
+                            <a href="/edit_product/{{ product.id }}" class="btn btn-warning btn-sm">{{ _('Edit') }}</a>
+                            <a href="/delete_product/{{ product.id }}"
+                               class="btn btn-danger btn-sm">{{ _('Delete') }}</a>
+                        {% else %}
+                            <a href="/add_favorite/{{ product.id }}" class="btn btn-outline-warning btn-sm">
+                                <i class="bi bi-bookmark-star-fill"></i>
+                            </a>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

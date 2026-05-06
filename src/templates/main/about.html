@@ -1,0 +1,65 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}{{ _('About') }}{% endblock %}
+
+{% block content %}
+<div class="container-md mt-3">
+
+    <!-- Hero -->
+    <div class="rounded-4 shadow-lg p-5 mb-4 text-white text-center"
+         style="background: linear-gradient(135deg, #f97316, #ea580c);">
+        <h1 class="display-4 fw-bold mb-2">ZYRA</h1>
+        <p class="fs-5 mb-0 opacity-75">{{ _('Your trusted online shopping destination') }}</p>
+    </div>
+
+    <!-- Hakkımızda -->
+    <div class="bg-white rounded-4 shadow-sm p-5 mb-4">
+        <div class="row align-items-center g-4">
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-3">{{ _('Who We Are') }}</h2>
+                <p class="text-muted lh-lg">{{ _('ZYRA is a modern online store offering a curated selection of quality products across multiple categories. We believe shopping should be simple, transparent, and personal — that\'s why we\'re always just one WhatsApp message away.') }}</p>
+                <p class="text-muted lh-lg">{{ _('No hidden fees, no complicated checkout flows. Browse, favorite, and reach out to us directly. We handle the rest.') }}</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <i class="bi bi-shop" style="font-size: 8rem; color: #f97316; opacity: 0.15;"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Değerler -->
+    <div class="row g-3 mb-4">
+        <div class="col-md-4">
+            <div class="bg-white rounded-4 shadow-sm p-4 text-center h-100">
+                <i class="bi bi-shield-check fs-1 mb-3" style="color: #f97316;"></i>
+                <h5 class="fw-bold">{{ _('Trusted Quality') }}</h5>
+                <p class="text-muted small">{{ _('Every product is carefully selected and verified before being listed on our platform.') }}</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bg-white rounded-4 shadow-sm p-4 text-center h-100">
+                <i class="bi bi-whatsapp fs-1 mb-3" style="color: #f97316;"></i>
+                <h5 class="fw-bold">{{ _('Personal Support') }}</h5>
+                <p class="text-muted small">{{ _('Skip the bots. Talk to a real person via WhatsApp and get answers instantly.') }}</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bg-white rounded-4 shadow-sm p-4 text-center h-100">
+                <i class="bi bi-star fs-1 mb-3" style="color: #f97316;"></i>
+                <h5 class="fw-bold">{{ _('Real Reviews') }}</h5>
+                <p class="text-muted small">{{ _('Honest ratings and comments from real customers help you make the right choice.') }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- İletişim -->
+    <div class="bg-white rounded-4 shadow-sm p-5 mb-4 text-center">
+        <h4 class="fw-bold mb-2">{{ _('Have a question?') }}</h4>
+        <p class="text-muted mb-4">{{ _("We're always happy to help. Reach out to us directly on WhatsApp.") }}</p>
+        <a href="https://wa.me/994XXXXXXXXX?text=Merhaba%2C%20ZYRA%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+           class="btn btn-success btn-lg" target="_blank">
+            <i class="bi bi-whatsapp me-2"></i> {{ _('Contact Us on WhatsApp') }}
+        </a>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,386 @@
+# Translations template for PROJECT.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-04-22 02:30+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: src/templates/macros.html:50
+msgid "No reviews yet"
+msgstr ""
+
+#: src/templates/macros.html:55 src/templates/product/view_product.html:56
+msgid "In Stock"
+msgstr ""
+
+#: src/templates/macros.html:57 src/templates/product/view_product.html:60
+msgid "Out of Stock"
+msgstr ""
+
+#: src/templates/macros.html:62 src/templates/product/favorites.html:18
+msgid "View"
+msgstr ""
+
+#: src/templates/macros.html:65 src/templates/product/view_product.html:103
+msgid "Edit"
+msgstr ""
+
+#: src/templates/macros.html:66 src/templates/product/view_product.html:106
+msgid "Delete"
+msgstr ""
+
+#: src/templates/admin/dashboard.html:5
+msgid "Admin Dashboard"
+msgstr ""
+
+#: src/templates/admin/dashboard.html:14
+msgid "Products"
+msgstr ""
+
+#: src/templates/admin/dashboard.html:23
+msgid "Users"
+msgstr ""
+
+#: src/templates/admin/dashboard.html:32
+#: src/templates/product/view_product.html:120
+msgid "Reviews"
+msgstr ""
+
+#: src/templates/admin/dashboard.html:41 src/templates/layouts/navbar.html:35
+msgid "Favorites"
+msgstr ""
+
+#: src/templates/admin/dashboard.html:48
+msgid "Recent Reviews"
+msgstr ""
+
+#: src/templates/admin/dashboard.html:54
+msgid "User"
+msgstr ""
+
+#: src/templates/admin/dashboard.html:55
+msgid "Product"
+msgstr ""
+
+#: src/templates/admin/dashboard.html:56
+#: src/templates/product/view_product.html:128
+msgid "Rating"
+msgstr ""
+
+#: src/templates/admin/dashboard.html:57
+#: src/templates/product/view_product.html:143
+msgid "Comment"
+msgstr ""
+
+#: src/templates/admin/dashboard.html:58
+msgid "Date"
+msgstr ""
+
+#: src/templates/admin/dashboard.html:59
+msgid "Action"
+msgstr ""
+
+#: src/templates/admin/dashboard.html:94
+msgid "No reviews yet."
+msgstr ""
+
+#: src/templates/auth/login.html:9
+msgid "Welcome back"
+msgstr ""
+
+#: src/templates/auth/login.html:10
+msgid "Sign in to your ZYRA account"
+msgstr ""
+
+#: src/templates/auth/login.html:19 src/templates/auth/register.html:27
+msgid "Enter username"
+msgstr ""
+
+#: src/templates/auth/login.html:24 src/templates/auth/register.html:32
+msgid "Enter password"
+msgstr ""
+
+#: src/templates/auth/login.html:33 src/templates/auth/register.html:46
+msgid "or"
+msgstr ""
+
+#: src/templates/auth/login.html:39
+msgid "Don't have an account?"
+msgstr ""
+
+#: src/templates/auth/login.html:41
+msgid "Create an Account"
+msgstr ""
+
+#: src/templates/auth/register.html:2 src/templates/layouts/navbar.html:62
+msgid "Register"
+msgstr ""
+
+#: src/templates/auth/register.html:10
+msgid "Create Account"
+msgstr ""
+
+#: src/templates/auth/register.html:11
+msgid "Join ZYRA and start shopping"
+msgstr ""
+
+#: src/templates/auth/register.html:37
+msgid "Repeat password"
+msgstr ""
+
+#: src/templates/auth/register.html:52
+msgid "Already have an account?"
+msgstr ""
+
+#: src/templates/auth/register.html:54
+msgid "Sign In"
+msgstr ""
+
+#: src/templates/layouts/navbar.html:12
+msgid "Home"
+msgstr ""
+
+#: src/templates/layouts/navbar.html:13 src/templates/main/about.html:3
+msgid "About"
+msgstr ""
+
+#: src/templates/layouts/navbar.html:33
+msgid "Dashboard"
+msgstr ""
+
+#: src/templates/layouts/navbar.html:46
+msgid "Search products..."
+msgstr ""
+
+#: src/templates/layouts/navbar.html:59
+msgid "Logout"
+msgstr ""
+
+#: src/templates/layouts/navbar.html:61
+msgid "Login"
+msgstr ""
+
+#: src/templates/main/about.html:12
+msgid "Your trusted online shopping destination"
+msgstr ""
+
+#: src/templates/main/about.html:19
+msgid "Who We Are"
+msgstr ""
+
+#: src/templates/main/about.html:20
+msgid ""
+"ZYRA is a modern online store offering a curated selection of quality "
+"products across multiple categories. We believe shopping should be "
+"simple, transparent, and personal — that's why we're always just one "
+"WhatsApp message away."
+msgstr ""
+
+#: src/templates/main/about.html:21
+msgid ""
+"No hidden fees, no complicated checkout flows. Browse, favorite, and "
+"reach out to us directly. We handle the rest."
+msgstr ""
+
+#: src/templates/main/about.html:34
+msgid "Trusted Quality"
+msgstr ""
+
+#: src/templates/main/about.html:35
+msgid ""
+"Every product is carefully selected and verified before being listed on "
+"our platform."
+msgstr ""
+
+#: src/templates/main/about.html:41
+msgid "Personal Support"
+msgstr ""
+
+#: src/templates/main/about.html:42
+msgid ""
+"Skip the bots. Talk to a real person via WhatsApp and get answers "
+"instantly."
+msgstr ""
+
+#: src/templates/main/about.html:48
+msgid "Real Reviews"
+msgstr ""
+
+#: src/templates/main/about.html:49
+msgid ""
+"Honest ratings and comments from real customers help you make the right "
+"choice."
+msgstr ""
+
+#: src/templates/main/about.html:56
+msgid "Have a question?"
+msgstr ""
+
+#: src/templates/main/about.html:57
+msgid "We're always happy to help. Reach out to us directly on WhatsApp."
+msgstr ""
+
+#: src/templates/main/about.html:60
+msgid "Contact Us on WhatsApp"
+msgstr ""
+
+#: src/templates/main/index.html:27
+msgid "Welcome to"
+msgstr ""
+
+#: src/templates/main/index.html:30
+msgid "Discover quality products,"
+msgstr ""
+
+#: src/templates/main/index.html:30
+msgid "handpicked just for you."
+msgstr ""
+
+#: src/templates/main/index.html:34
+msgid "Shop Now"
+msgstr ""
+
+#: src/templates/main/index.html:47
+msgid "Need help deciding?"
+msgstr ""
+
+#: src/templates/main/index.html:48
+msgid "Talk to Us"
+msgstr ""
+
+#: src/templates/main/index.html:50
+msgid "We're one WhatsApp message away."
+msgstr ""
+
+#: src/templates/main/index.html:50
+msgid "Personal support, always."
+msgstr ""
+
+#: src/templates/main/index.html:54
+msgid "Learn More"
+msgstr ""
+
+#: src/templates/main/index.html:67
+msgid "Save your favorites"
+msgstr ""
+
+#: src/templates/main/index.html:68
+msgid "Come Back Anytime"
+msgstr ""
+
+#: src/templates/main/index.html:70
+msgid "Bookmark the products you love"
+msgstr ""
+
+#: src/templates/main/index.html:70
+msgid "and find them instantly."
+msgstr ""
+
+#: src/templates/main/index.html:75 src/templates/product/favorites.html:5
+msgid "My Favorites"
+msgstr ""
+
+#: src/templates/main/index.html:80
+msgid "Get Started"
+msgstr ""
+
+#: src/templates/main/index.html:96
+msgid "All"
+msgstr ""
+
+#: src/templates/main/index.html:109
+msgid "Newest"
+msgstr ""
+
+#: src/templates/main/index.html:111
+msgid "Price: Low to High"
+msgstr ""
+
+#: src/templates/main/index.html:113
+msgid "Price: High to Low"
+msgstr ""
+
+#: src/templates/main/index.html:115
+msgid "Name: A-Z"
+msgstr ""
+
+#: src/templates/main/index.html:128
+msgid "No products found for"
+msgstr ""
+
+#: src/templates/product/create_product.html:25
+msgid "Enter product description..."
+msgstr ""
+
+#: src/templates/product/create_product.html:41
+msgid "You can select multiple images at once."
+msgstr ""
+
+#: src/templates/product/favorites.html:21
+msgid "Remove"
+msgstr ""
+
+#: src/templates/product/favorites.html:32
+msgid "You have no favorites yet."
+msgstr ""
+
+#: src/templates/product/favorites.html:33
+msgid "Browse Products"
+msgstr ""
+
+#: src/templates/product/view_product.html:29
+msgid "Product image"
+msgstr ""
+
+#: src/templates/product/view_product.html:48
+msgid "reviews"
+msgstr ""
+
+#: src/templates/product/view_product.html:56
+msgid "left"
+msgstr ""
+
+#: src/templates/product/view_product.html:68
+msgid "No description available."
+msgstr ""
+
+#: src/templates/product/view_product.html:87
+msgid "Remove from Favorites"
+msgstr ""
+
+#: src/templates/product/view_product.html:92
+msgid "Add to Favorites"
+msgstr ""
+
+#: src/templates/product/view_product.html:111
+msgid "Back"
+msgstr ""
+
+#: src/templates/product/view_product.html:145
+msgid "Share your thoughts..."
+msgstr ""
+
+#: src/templates/product/view_product.html:149
+msgid "Submit Review"
+msgstr ""
+
+#: src/templates/product/view_product.html:153
+msgid "You have already reviewed this product."
+msgstr ""
+
+#: src/templates/product/view_product.html:193
+msgid "No reviews yet. Be the first to review!"
+msgstr ""
+

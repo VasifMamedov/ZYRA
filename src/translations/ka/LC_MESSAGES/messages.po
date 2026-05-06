@@ -1,0 +1,298 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ZYRA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ka\n"
+
+msgid "View"
+msgstr "ნახვა"
+
+msgid "Edit"
+msgstr "რედაქტირება"
+
+msgid "Delete"
+msgstr "წაშლა"
+
+msgid "Favorites"
+msgstr "რჩეულები"
+
+msgid "Dashboard"
+msgstr "პანელი"
+
+msgid "Home"
+msgstr "მთავარი"
+
+msgid "About"
+msgstr "ჩვენს შესახებ"
+
+msgid "Logout"
+msgstr "გამოსვლა"
+
+msgid "Login"
+msgstr "შესვლა"
+
+msgid "Register"
+msgstr "რეგისტრაცია"
+
+msgid "In Stock"
+msgstr "მარაგშია"
+
+msgid "Out of Stock"
+msgstr "არ არის მარაგში"
+
+msgid "left"
+msgstr "დარჩა"
+
+msgid "No description available."
+msgstr "აღწერა არ არის."
+
+msgid "Add to Favorites"
+msgstr "რჩეულებში დამატება"
+
+msgid "Remove from Favorites"
+msgstr "რჩეულებიდან წაშლა"
+
+msgid "Remove"
+msgstr "წაშლა"
+
+msgid "Back"
+msgstr "უკან"
+
+msgid "Search products..."
+msgstr "პროდუქტის ძიება..."
+
+msgid "My Favorites"
+msgstr "ჩემი რჩეულები"
+
+msgid "You have no favorites yet."
+msgstr "რჩეულები არ გაქვთ."
+
+msgid "Browse Products"
+msgstr "პროდუქტების დათვალიერება"
+
+msgid "No reviews yet. Be the first to review!"
+msgstr "კომენტარი არ არის. იყავი პირველი!"
+
+msgid "No reviews yet"
+msgstr "კომენტარი ჯერ არ არის"
+
+msgid "You have already reviewed this product."
+msgstr "თქვენ უკვე შეაფასეთ ეს პროდუქტი."
+
+msgid "Rating"
+msgstr "შეფასება"
+
+msgid "Comment"
+msgstr "კომენტარი"
+
+msgid "Submit Review"
+msgstr "კომენტარის გაგზავნა"
+
+msgid "Reviews"
+msgstr "კომენტარები"
+
+msgid "reviews"
+msgstr "კომენტარი"
+
+msgid "More Images"
+msgstr "მეტი სურათი"
+
+msgid "Product image"
+msgstr "პროდუქტის სურათი"
+
+msgid "Save"
+msgstr "შენახვა"
+
+msgid "Product Name"
+msgstr "პროდუქტის სახელი"
+
+msgid "Product Price"
+msgstr "პროდუქტის ფასი"
+
+msgid "Main Image"
+msgstr "მთავარი სურათი"
+
+msgid "Additional Images"
+msgstr "დამატებითი სურათები"
+
+msgid "Product Description"
+msgstr "პროდუქტის აღწერა"
+
+msgid "Stock"
+msgstr "მარაგი"
+
+msgid "Category"
+msgstr "კატეგორია"
+
+msgid "Enter product description..."
+msgstr "შეიყვანეთ პროდუქტის აღწერა..."
+
+msgid "You can select multiple images at once."
+msgstr "შეგიძლიათ ერთდროულად რამდენიმე სურათის არჩევა."
+
+msgid "Welcome back"
+msgstr "კეთილი იყოს თქვენი დაბრუნება"
+
+msgid "Sign in to your ZYRA account"
+msgstr "შედით თქვენს ZYRA ანგარიშზე"
+
+msgid "Enter username"
+msgstr "შეიყვანეთ მომხმარებლის სახელი"
+
+msgid "Enter password"
+msgstr "შეიყვანეთ პაროლი"
+
+msgid "or"
+msgstr "ან"
+
+msgid "Don't have an account?"
+msgstr "არ გაქვთ ანგარიში?"
+
+msgid "Create an Account"
+msgstr "ანგარიშის შექმნა"
+
+msgid "Create Account"
+msgstr "ანგარიშის შექმნა"
+
+msgid "Join ZYRA and start shopping"
+msgstr "შეუერთდით ZYRA-ს და დაიწყეთ შოპინგი"
+
+msgid "Repeat password"
+msgstr "გაიმეორეთ პაროლი"
+
+msgid "Already have an account?"
+msgstr "უკვე გაქვთ ანგარიში?"
+
+msgid "Sign In"
+msgstr "შესვლა"
+
+msgid "Admin Dashboard"
+msgstr "ადმინ პანელი"
+
+msgid "Products"
+msgstr "პროდუქტები"
+
+msgid "Users"
+msgstr "მომხმარებლები"
+
+msgid "User"
+msgstr "მომხმარებელი"
+
+msgid "Product"
+msgstr "პროდუქტი"
+
+msgid "Date"
+msgstr "თარიღი"
+
+msgid "Action"
+msgstr "მოქმედება"
+
+msgid "Recent Reviews"
+msgstr "ბოლო კომენტარები"
+
+msgid "No reviews yet."
+msgstr "კომენტარი არ არის."
+
+msgid "Your trusted online shopping destination"
+msgstr "თქვენი სანდო ონლაინ შოპინგის ადგილი"
+
+msgid "Who We Are"
+msgstr "ვინ ვართ ჩვენ"
+
+msgid "ZYRA is a modern online store offering a curated selection of quality products across multiple categories. We believe shopping should be simple, transparent, and personal — that's why we're always just one WhatsApp message away."
+msgstr "ZYRA არის თანამედროვე ონლაინ მაღაზია, რომელიც გთავაზობთ ხარისხიანი პროდუქტების შერჩეულ კოლექციას სხვადასხვა კატეგორიაში. ჩვენ გვჯერა, რომ შოპინგი უნდა იყოს მარტივი, გამჭვირვალე და პირადი — სწორედ ამიტომ ყოველთვის ერთი WhatsApp შეტყობინების მოშორებით ვართ."
+
+msgid "No hidden fees, no complicated checkout flows. Browse, favorite, and reach out to us directly. We handle the rest."
+msgstr "დამალული საფასური არ არის, რთული გადახდის პროცესი არ არის. დაათვალიერეთ, დაამატეთ რჩეულებში და პირდაპირ დაგვიკავშირდით. დანარჩენს ჩვენ გავაკეთებთ."
+
+msgid "Trusted Quality"
+msgstr "სანდო ხარისხი"
+
+msgid "Every product is carefully selected and verified before being listed on our platform."
+msgstr "თითოეული პროდუქტი ფრთხილად არის შერჩეული და შემოწმებული ჩვენს პლატფორმაზე დამატებამდე."
+
+msgid "Personal Support"
+msgstr "პირადი მხარდაჭერა"
+
+msgid "Skip the bots. Talk to a real person via WhatsApp and get answers instantly."
+msgstr "გამოტოვეთ ბოტები. ისაუბრეთ რეალურ ადამიანთან WhatsApp-ის საშუალებით და მიიღეთ პასუხები მყისიერად."
+
+msgid "Real Reviews"
+msgstr "რეალური შეფასებები"
+
+msgid "Honest ratings and comments from real customers help you make the right choice."
+msgstr "რეალური მომხმარებლების გულწრფელი შეფასებები და კომენტარები გეხმარებათ სწორი არჩევანის გაკეთებაში."
+
+msgid "Have a question?"
+msgstr "გაქვთ შეკითხვა?"
+
+msgid "We're always happy to help. Reach out to us directly on WhatsApp."
+msgstr "ყოველთვის სიამოვნებით დაგეხმარებით. პირდაპირ დაგვიკავშირდით WhatsApp-ზე."
+
+msgid "Contact Us on WhatsApp"
+msgstr "დაგვიკავშირდით WhatsApp-ზე"
+
+msgid "Welcome to"
+msgstr "კეთილი იყოს თქვენი მობრძანება"
+
+msgid "Discover quality products,"
+msgstr "აღმოაჩინეთ ხარისხიანი პროდუქტები,"
+
+msgid "handpicked just for you."
+msgstr "სპეციალურად თქვენთვის შერჩეული."
+
+msgid "Shop Now"
+msgstr "იყიდე ახლა"
+
+msgid "Need help deciding?"
+msgstr "გჭირდებათ დახმარება არჩევანში?"
+
+msgid "Talk to Us"
+msgstr "დაგვიკავშირდით"
+
+msgid "We're one WhatsApp message away."
+msgstr "ერთი WhatsApp შეტყობინების მოშორებით ვართ."
+
+msgid "Personal support, always."
+msgstr "პირადი მხარდაჭერა, ყოველთვის."
+
+msgid "Learn More"
+msgstr "გაიგე მეტი"
+
+msgid "Save your favorites"
+msgstr "შეინახეთ თქვენი რჩეულები"
+
+msgid "Come Back Anytime"
+msgstr "დაბრუნდით ნებისმიერ დროს"
+
+msgid "Bookmark the products you love"
+msgstr "მონიშნეთ თქვენთვის სასურველი პროდუქტები"
+
+msgid "and find them instantly."
+msgstr "და იპოვეთ ისინი მყისიერად."
+
+msgid "Get Started"
+msgstr "დაწყება"
+
+msgid "All"
+msgstr "ყველა"
+
+msgid "Newest"
+msgstr "უახლესი"
+
+msgid "Price: Low to High"
+msgstr "ფასი: დაბლიდან მაღლა"
+
+msgid "Price: High to Low"
+msgstr "ფასი: მაღლიდან დაბლა"
+
+msgid "Name: A-Z"
+msgstr "სახელი: A-Z"
+
+msgid "No products found for"
+msgstr "პროდუქტი ვერ მოიძებნა:"
+
+msgid "Share your thoughts..."
+msgstr "გაუზიარეთ თქვენი აზრები..."

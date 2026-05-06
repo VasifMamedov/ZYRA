@@ -1,0 +1,205 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <div class="container-md bg-white py-4 px-5 shadow-lg rounded-4 mt-3">
+
+        <div class="row g-4">
+            <!-- productis gamosaxuleba -->
+            <div class="col-md-5 text-center">
+                {% if product.img %}
+                    <img id="mainImage" src="/static/upload/{{ product.img }}"
+                         class="img-fluid rounded-3 shadow-sm"
+                         style="max-height: 350px; object-fit: contain;"
+                         alt="{{ product.name }}">
+                {% else %}
+                    <div class="d-flex align-items-center justify-content-center bg-light rounded-3"
+                         style="height: 350px;">
+                        <i class="bi bi-image text-muted" style="font-size: 5rem;"></i>
+                    </div>
+                {% endif %}
+
+                {% if product.images %}
+                    <div class="row g-2 mt-2">
+                        {% for image in product.images %}
+                            <div class="col-4">
+                                <img src="/static/upload/{{ image.img }}"
+                                     class="img-fluid rounded-3"
+                                     style="height: 80px; width: 100%; object-fit: cover; cursor: pointer;"
+                                     onclick="document.getElementById('mainImage').src=this.src"
+                                     alt="{{ _('Product image') }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <!-- productis monacemebi -->
+            <div class="col-md-7 d-flex flex-column justify-content-center">
+                <h2 class="fw-bold mb-2">{{ product.name }}</h2>
+                {% if reviews %}
+                    <div class="mb-2">
+                        {% for i in range(1, 6) %}
+                            {% if i <= avg_rating %}
+                                <i class="bi bi-star-fill text-warning"></i>
+                            {% else %}
+                                <i class="bi bi-star text-warning"></i>
+                            {% endif %}
+                        {% endfor %}
+                        <span class="text-muted small ms-1">{{ avg_rating }} / 5 ({{ reviews|length }} {{ _('reviews') }})</span>
+                    </div>
+                {% endif %}
+                <h4 class="text-primary mb-3">₾{{ "%.2f"|format(product.price) }}</h4>
+
+                {% if product.stock is not none %}
+                    {% if product.stock > 0 %}
+                        <span class="badge bg-success mb-3" style="width: fit-content;">
+                            ✓ {{ _('In Stock') }} ({{ product.stock }} {{ _('left') }})
+                        </span>
+                    {% else %}
+                        <span class="badge bg-danger mb-3" style="width: fit-content;">
+                            ✗ {{ _('Out of Stock') }}
+                        </span>
+                    {% endif %}
+                {% endif %}
+
+                {% if product.description %}
+                    <p class="text-muted mb-4">{{ product.description }}</p>
+                {% else %}
+                    <p class="text-muted fst-italic mb-4">{{ _('No description available.') }}</p>
+                {% endif %}
+
+                {% set lang = session.get('lang', 'en') %}
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                    {% for category in product.category %}
+                        <span class="badge bg-warning text-dark" style="font-size: 0.7rem;">
+            {% if lang == 'tr' and category.name_tr %}
+                {{ category.name_tr }}
+            {% elif lang == 'ka' and category.name_ka %}
+                {{ category.name_ka }}
+            {% else %}
+                {{ category.name }}
+            {% endif %}
+        </span>
+                    {% endfor %}
+                </div>
+
+                <hr>
+
+                <!-- buttonebi -->
+                <div class="d-flex gap-2 flex-wrap">
+                    {% if current_user.is_authenticated and current_user.role != 'admin' %}
+                        {% if is_favorited %}
+                            <a href="/remove_favorite/{{ product.id }}"
+                               class="btn btn-outline-danger">
+                                <i class="bi bi-bookmark-x-fill"></i> {{ _('Remove from Favorites') }}
+                            </a>
+                        {% else %}
+                            <a href="/add_favorite/{{ product.id }}"
+                               class="btn btn-outline-warning">
+                                <i class="bi bi-bookmark-star"></i> {{ _('Add to Favorites') }}
+                            </a>
+                        {% endif %}
+                        <a href="https://wa.me/995557091040?text=Bonjour%2C%20%22{{ product.name | urlencode }}%22%20%C3%BCr%C3%BCn%C3%BCyle%20ilgileniyorum%20(%24{{ '%.2f' | format(product.price) }}).%20Bilgi%20alabilir%20miyim%3F"
+                           class="btn btn-success" target="_blank">
+                            <i class="bi bi-whatsapp"></i> WhatsApp
+                        </a>
+                    {% endif %}
+
+                    {% if current_user.is_authenticated and current_user.role == 'admin' %}
+                        <a href="/edit_product/{{ product.id }}" class="btn btn-warning">
+                            <i class="bi bi-pencil"></i> {{ _('Edit') }}
+                        </a>
+                        <a href="/delete_product/{{ product.id }}" class="btn btn-danger">
+                            <i class="bi bi-trash"></i> {{ _('Delete') }}
+                        </a>
+                    {% endif %}
+
+                    <a href="{{ url_for('main.index') }}" class="btn btn-secondary">
+                        ← {{ _('Back') }}
+                    </a>
+                </div>
+            </div>
+
+            <hr class="mt-4">
+
+            <!-- Yorum Bölümü -->
+            <div class="mt-3 mb-4">
+                <h5 class="fw-bold mb-3">{{ _('Reviews') }}</h5>
+
+                {% if current_user.is_authenticated and current_user.role != 'admin' %}
+                    {% if not user_reviewed %}
+                        <form method="POST" action="/add_review/{{ product.id }}" class="mb-4">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+                            <div class="mb-2">
+                                <label class="form-label fw-semibold">{{ _('Rating') }}</label>
+                                <div class="d-flex gap-2">
+                                    {% for i in range(1, 6) %}
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio"
+                                                   name="rating" id="star{{ i }}" value="{{ i }}" required>
+                                            <label class="form-check-label" for="star{{ i }}">
+                                                {{ i }} <i class="bi bi-star-fill text-warning"></i>
+                                            </label>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="mb-2">
+                                <label class="form-label fw-semibold">{{ _('Comment') }}</label>
+                                <textarea name="comment" class="form-control" rows="3"
+                                          placeholder="{{ _('Share your thoughts...') }}"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-warning btn-sm">
+                                <i class="bi bi-send"></i> {{ _('Submit Review') }}
+                            </button>
+                        </form>
+                    {% else %}
+                        <p class="text-muted fst-italic mb-4">{{ _('You have already reviewed this product.') }}</p>
+                    {% endif %}
+                {% endif %}
+
+                {% if reviews %}
+                    {% for review in reviews %}
+                        <div class="border rounded-3 p-3 mb-2 bg-light">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="fw-semibold">{{ review.user.username }}</span>
+                                    <span class="ms-2">
+                                        {% for i in range(1, 6) %}
+                                            {% if i <= review.rating %}
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            {% else %}
+                                                <i class="bi bi-star text-warning"></i>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </span>
+                                    <span class="text-muted small ms-2">
+                                        {{ review.created_at.strftime('%d %b %Y') }}
+                                    </span>
+                                </div>
+
+                                {% if current_user.is_authenticated %}
+                                    {% if review.user_id == current_user.id or current_user.role == 'admin' %}
+                                        <a href="/delete_review/{{ review.id }}"
+                                           class="btn btn-outline-danger btn-sm">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    {% endif %}
+                                {% endif %}
+                            </div>
+
+                            {% if review.comment %}
+                                <p class="mt-2 mb-0 text-muted">{{ review.comment }}</p>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="text-muted fst-italic">{{ _('No reviews yet. Be the first to review!') }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
