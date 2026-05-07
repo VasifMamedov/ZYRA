@@ -302,3 +302,33 @@ msgstr "მხოლოდ სურათები!"
 
 msgid "Add Product"
 msgstr "პროდუქტის დამატება"
+
+msgid "We bring the store to your door."
+msgstr "ჩვენ მაღაზიას თქვენს კართან მოვიტანთ."
+
+msgid "No showroom. No commute. Just delivery."
+msgstr "ვიტრინი არ არის. გზა არ არის. მხოლოდ მიწოდება."
+
+msgid "How it works"
+msgstr "როგორ მუშაობს"
+
+msgid "Browse. Message. Receive."
+msgstr "დაათვალიერე. დაწერე. მიიღე."
+
+msgid "Pick what you love, reach us on WhatsApp,"
+msgstr "აირჩიე რაც მოგწონს, დაგვიკავშირდი WhatsApp-ზე,"
+
+msgid "and we come to you."
+msgstr "და ჩვენ შენთან მოვიდებით."
+
+msgid "No store? No problem."
+msgstr "მაღაზია არ არის? პრობლემა არ არის."
+
+msgid "The Store Comes to You"
+msgstr "მაღაზია თქვენს ფეხებთან მოდის"
+
+msgid "We deliver anywhere."
+msgstr "ვაწვდით ყველგან."
+
+msgid "Favorite your items and contact us today."
+msgstr "დაამატე პროდუქტები რჩეულებში და დაგვიკავშირდი დღეს."

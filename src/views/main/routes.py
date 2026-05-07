@@ -26,7 +26,7 @@ def index():
     if query:
         products = products.filter(Product.name.ilike(f'%{query}%'))
     if category_id:
-        products = products.filter(Product.category_id == category_id)
+        products = products.filter(Product.category.any(id=category_id))
 
     if sort == 'price_asc':
         products = products.order_by(Product.price.asc())

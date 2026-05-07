@@ -2,144 +2,152 @@
 {% from "macros.html" import create_card with context %}
 
 {% block content %}
-    <div class="container-md bg-white py-1 shadow-lg rounded-4">
+<div class="container-md bg-white py-1 shadow-lg rounded-4">
 
-        <!-- Carousel -->
-        <div id="carouselExampleIndicators" class="carousel slide m-3 rounded-4 overflow-hidden"
-             data-bs-ride="carousel" data-bs-touch="true">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide-to="2"></button>
-            </div>
-
-            <div class="carousel-inner">
-
-                <!-- Slayt 1 -->
-                <div class="carousel-item active" data-bs-interval="3000">
-                    <div style="min-height: 220px; background: linear-gradient(135deg, #f97316, #ea580c);
-                        display: flex; align-items: center; justify-content: space-between;
-                        padding: 30px 40px;">
-                        <div class="text-white" style="max-width: 75%;">
-                            <p class="mb-1 opacity-75"
-                               style="font-size: clamp(0.75rem, 2vw, 1rem);">{{ _('Welcome to') }}</p>
-                            <h1 class="fw-bold mb-2" style="font-size: clamp(1.8rem, 5vw, 3rem);">ZYRA</h1>
-                            <p class="opacity-75 mb-3" style="font-size: clamp(0.8rem, 2vw, 1.1rem);">
-                                {{ _('Discover quality products,') }}<br>{{ _('handpicked just for you.') }}
-                            </p>
-                            <a href="#products" class="btn btn-light fw-semibold px-3"
-                               style="font-size: clamp(0.75rem, 2vw, 1rem);">
-                                {{ _('Shop Now') }} →
-                            </a>
-                        </div>
-                        <div class="d-none d-md-block" style="font-size: 7rem; opacity: 0.15;">🛍️</div>
-                    </div>
-                </div>
-
-                <!-- Slayt 2 -->
-                <div class="carousel-item" data-bs-interval="3000">
-                    <div style="min-height: 220px; background: linear-gradient(135deg, #1e293b, #0f172a);
-                        display: flex; align-items: center; justify-content: space-between;
-                        padding: 30px 40px;">
-                        <div class="text-white" style="max-width: 75%;">
-                            <p class="mb-1 opacity-75"
-                               style="font-size: clamp(0.75rem, 2vw, 1rem);">{{ _('Need help deciding?') }}</p>
-                            <h2 class="fw-bold mb-2"
-                                style="font-size: clamp(1.5rem, 4vw, 2.5rem);">{{ _('Talk to Us') }}</h2>
-                            <p class="opacity-75 mb-3" style="font-size: clamp(0.8rem, 2vw, 1.1rem);">
-                                {{ _("We're one WhatsApp message away.") }}<br>{{ _('Personal support, always.') }}
-                            </p>
-                            <a href="{{ url_for('main.about') }}" class="btn btn-warning fw-semibold px-3"
-                               style="font-size: clamp(0.75rem, 2vw, 1rem);">
-                                {{ _('Learn More') }} →
-                            </a>
-                        </div>
-                        <div class="d-none d-md-block" style="font-size: 7rem; opacity: 0.15;">💬</div>
-                    </div>
-                </div>
-
-                <!-- Slayt 3 -->
-                <div class="carousel-item" data-bs-interval="3000">
-                    <div style="min-height: 220px; background: linear-gradient(135deg, #0369a1, #0284c7);
-                        display: flex; align-items: center; justify-content: space-between;
-                        padding: 30px 40px;">
-                        <div class="text-white" style="max-width: 75%;">
-                            <p class="mb-1 opacity-75"
-                               style="font-size: clamp(0.75rem, 2vw, 1rem);">{{ _('Save your favorites') }}</p>
-                            <h2 class="fw-bold mb-2"
-                                style="font-size: clamp(1.5rem, 4vw, 2.5rem);">{{ _('Come Back Anytime') }}</h2>
-                            <p class="opacity-75 mb-3" style="font-size: clamp(0.8rem, 2vw, 1.1rem);">
-                                {{ _('Bookmark the products you love') }}<br>{{ _('and find them instantly.') }}
-                            </p>
-                            {% if current_user.is_authenticated %}
-                                <a href="{{ url_for('main.favorites') }}" class="btn btn-light fw-semibold px-3"
-                                   style="font-size: clamp(0.75rem, 2vw, 1rem);">
-                                    {{ _('My Favorites') }} →
-                                </a>
-                            {% else %}
-                                <a href="/register" class="btn btn-light fw-semibold px-3"
-                                   style="font-size: clamp(0.75rem, 2vw, 1rem);">
-                                    {{ _('Get Started') }} →
-                                </a>
-                            {% endif %}
-                        </div>
-                        <div class="d-none d-md-block" style="font-size: 7rem; opacity: 0.15;">⭐</div>
-                    </div>
-                </div>
-
-            </div>
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide m-3 rounded-4 overflow-hidden"
+         data-bs-ride="carousel" data-bs-touch="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2"></button>
         </div>
+        <div class="carousel-inner">
 
-        <!-- Kategori + Filter -->
-        <div class="mx-3 mb-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
-            <div class="d-flex gap-2 flex-wrap">
-                <a href="{{ url_for('main.index', q=query) }}"
-                   class="btn btn-sm {{ 'btn-dark' if not active_category else 'btn-outline-dark' }}">
-                    {{ _('All') }}
-                </a>
-                {% set lang = session.get('lang', 'en') %}
-                {% for category in categories %}
-                    <a href="{{ url_for('main.index', q=query, category=category.id) }}"
-                       class="btn btn-sm {{ 'btn-warning' if active_category == category.id else 'btn-outline-warning' }}">
-                        {% if lang == 'tr' and category.name_tr %}
-                            {{ category.name_tr }}
-                        {% elif lang == 'ka' and category.name_ka %}
-                            {{ category.name_ka }}
+            <!-- Slayt 1 -->
+            <div class="carousel-item active" data-bs-interval="3000">
+                <div style="min-height: 220px; background: linear-gradient(135deg, #f97316, #ea580c);
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 30px 40px;">
+                    <div class="text-white" style="max-width: 75%;">
+                        <p class="mb-1 opacity-75" style="font-size: clamp(0.75rem, 2vw, 1rem);">{{ _('Welcome to')
+                            }}</p>
+                        <h1 class="fw-bold mb-2" style="font-size: clamp(1.8rem, 5vw, 3rem);">ZYRA</h1>
+                        <p class="opacity-75 mb-3" style="font-size: clamp(0.8rem, 2vw, 1.1rem);">
+                            {{ _('We bring the store to your door.') }}<br>
+                            {{ _('No showroom. No commute. Just delivery.') }}
+                        </p>
+                        <a href="#products" class="btn btn-light fw-semibold px-3"
+                           style="font-size: clamp(0.75rem, 2vw, 1rem);">
+                            {{ _('Shop Now') }} →
+                        </a>
+                    </div>
+                    <div class="d-none d-md-block" style="font-size: 7rem; opacity: 0.15;">🚚</div>
+                </div>
+            </div>
+
+            <!-- Slayt 2 -->
+            <div class="carousel-item" data-bs-interval="3000">
+                <div style="min-height: 220px; background: linear-gradient(135deg, #1e293b, #0f172a);
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 30px 40px;">
+                    <div class="text-white" style="max-width: 75%;">
+                        <p class="mb-1 opacity-75" style="font-size: clamp(0.75rem, 2vw, 1rem);">{{ _('How it works')
+                            }}</p>
+                        <h2 class="fw-bold mb-2" style="font-size: clamp(1.5rem, 4vw, 2.5rem);">{{ _('Browse. Message.
+                            Receive.') }}</h2>
+                        <p class="opacity-75 mb-3" style="font-size: clamp(0.8rem, 2vw, 1.1rem);">
+                            {{ _('Pick what you love, reach us on WhatsApp,') }}<br>
+                            {{ _('and we come to you.') }}
+                        </p>
+                        <a href="{{ url_for('main.about') }}" class="btn btn-warning fw-semibold px-3"
+                           style="font-size: clamp(0.75rem, 2vw, 1rem);">
+                            {{ _('Learn More') }} →
+                        </a>
+                    </div>
+                    <div class="d-none d-md-block" style="font-size: 7rem; opacity: 0.15;">📦</div>
+                </div>
+            </div>
+
+            <!-- Slayt 3 -->
+            <div class="carousel-item" data-bs-interval="3000">
+                <div style="min-height: 220px; background: linear-gradient(135deg, #0369a1, #0284c7);
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 30px 40px;">
+                    <div class="text-white" style="max-width: 75%;">
+                        <p class="mb-1 opacity-75" style="font-size: clamp(0.75rem, 2vw, 1rem);">{{ _('No store? No
+                            problem.') }}</p>
+                        <h2 class="fw-bold mb-2" style="font-size: clamp(1.5rem, 4vw, 2.5rem);">{{ _('The Store Comes to
+                            You') }}</h2>
+                        <p class="opacity-75 mb-3" style="font-size: clamp(0.8rem, 2vw, 1.1rem);">
+                            {{ _('We deliver anywhere.') }}<br>
+                            {{ _('Favorite your items and contact us today.') }}
+                        </p>
+                        {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('main.favorites') }}" class="btn btn-light fw-semibold px-3"
+                           style="font-size: clamp(0.75rem, 2vw, 1rem);">
+                            {{ _('My Favorites') }} →
+                        </a>
                         {% else %}
-                            {{ category.name }}
+                        <a href="/register" class="btn btn-light fw-semibold px-3"
+                           style="font-size: clamp(0.75rem, 2vw, 1rem);">
+                            {{ _('Get Started') }} →
+                        </a>
                         {% endif %}
-                    </a>
-                {% endfor %}
+                    </div>
+                    <div class="d-none d-md-block" style="font-size: 7rem; opacity: 0.15;">🏠</div>
+                </div>
             </div>
 
-            <select class="form-select form-select-sm" style="width: auto;"
-                    onchange="window.location.href=this.value">
-                <option value="{{ url_for('main.index', q=query, category=active_category, sort='newest') }}"
-                        {{ 'selected' if sort == 'newest' }}>{{ _('Newest') }}</option>
-                <option value="{{ url_for('main.index', q=query, category=active_category, sort='price_asc') }}"
-                        {{ 'selected' if sort == 'price_asc' }}>{{ _('Price: Low to High') }}</option>
-                <option value="{{ url_for('main.index', q=query, category=active_category, sort='price_desc') }}"
-                        {{ 'selected' if sort == 'price_desc' }}>{{ _('Price: High to Low') }}</option>
-                <option value="{{ url_for('main.index', q=query, category=active_category, sort='name_asc') }}"
-                        {{ 'selected' if sort == 'name_asc' }}>{{ _('Name: A-Z') }}</option>
-            </select>
         </div>
 
-        <!-- Product List -->
-        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 m-2">
-            {% if product_list %}
-                {% for product in product_list %}
-                    {{ create_card(product) }}
-                {% endfor %}
-            {% else %}
-                <div class="col-12 text-center text-muted py-5">
-                    <i class="bi bi-search fs-1"></i>
-                    <p class="mt-3">{{ _('No products found for') }} "<strong>{{ query }}</strong>"</p>
-                </div>
-            {% endif %}
-        </div>
+
     </div>
+
+    <!-- Kategori + Filter -->
+    <div class="mx-3 mb-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex gap-2 flex-wrap">
+            <a href="{{ url_for('main.index', q=query) }}"
+               class="btn btn-sm {{ 'btn-dark' if not active_category else 'btn-outline-dark' }}">
+                {{ _('All') }}
+            </a>
+            {% set lang = session.get('lang', 'en') %}
+            {% for category in categories %}
+            <a href="{{ url_for('main.index', q=query, category=category.id) }}"
+               class="btn btn-sm {{ 'btn-warning' if active_category == category.id else 'btn-outline-warning' }}">
+                {% if lang == 'tr' and category.name_tr %}
+                {{ category.name_tr }}
+                {% elif lang == 'ka' and category.name_ka %}
+                {{ category.name_ka }}
+                {% else %}
+                {{ category.name }}
+                {% endif %}
+            </a>
+            {% endfor %}
+        </div>
+
+        <select class="form-select form-select-sm" style="width: auto;"
+                onchange="window.location.href=this.value">
+            <option value="{{ url_for('main.index', q=query, category=active_category, sort='newest') }}"
+                    {{
+            'selected' if sort == 'newest' }}>{{ _('Newest') }}</option>
+            <option value="{{ url_for('main.index', q=query, category=active_category, sort='price_asc') }}"
+                    {{
+            'selected' if sort == 'price_asc' }}>{{ _('Price: Low to High') }}</option>
+            <option value="{{ url_for('main.index', q=query, category=active_category, sort='price_desc') }}"
+                    {{
+            'selected' if sort == 'price_desc' }}>{{ _('Price: High to Low') }}</option>
+            <option value="{{ url_for('main.index', q=query, category=active_category, sort='name_asc') }}"
+                    {{
+            'selected' if sort == 'name_asc' }}>{{ _('Name: A-Z') }}</option>
+        </select>
+    </div>
+
+    <!-- Product List -->
+    <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 m-2">
+        {% if product_list %}
+        {% for product in product_list %}
+        {{ create_card(product) }}
+        {% endfor %}
+        {% else %}
+        <div class="col-12 text-center text-muted py-5">
+            <i class="bi bi-search fs-1"></i>
+            <p class="mt-3">{{ _('No products found for') }} "<strong>{{ query }}</strong>"</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}

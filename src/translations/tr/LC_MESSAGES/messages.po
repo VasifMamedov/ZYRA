@@ -305,3 +305,33 @@ msgstr "Sadece görseller!"
 
 msgid "Add Product"
 msgstr "Ürün Ekle"
+
+msgid "We bring the store to your door."
+msgstr "Mağazayı kapınıza getiriyoruz."
+
+msgid "No showroom. No commute. Just delivery."
+msgstr "Vitrin yok. Yol yok. Sadece teslimat."
+
+msgid "How it works"
+msgstr "Nasıl çalışır"
+
+msgid "Browse. Message. Receive."
+msgstr "Gez. Yaz. Al."
+
+msgid "Pick what you love, reach us on WhatsApp,"
+msgstr "Beğendiğini seç, WhatsApp'tan yaz,"
+
+msgid "and we come to you."
+msgstr "biz sana geliyoruz."
+
+msgid "No store? No problem."
+msgstr "Mağaza mı yok? Sorun değil."
+
+msgid "The Store Comes to You"
+msgstr "Mağaza Ayağınıza Geliyor"
+
+msgid "We deliver anywhere."
+msgstr "Her yere teslim ediyoruz."
+
+msgid "Favorite your items and contact us today."
+msgstr "Ürünleri favorile, bugün bize ulaş."
