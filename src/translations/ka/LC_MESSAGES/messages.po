@@ -296,3 +296,9 @@ msgstr "პროდუქტი ვერ მოიძებნა:"
 
 msgid "Share your thoughts..."
 msgstr "გაუზიარეთ თქვენი აზრები..."
+
+msgid "Images only!"
+msgstr "მხოლოდ სურათები!"
+
+msgid "Add Product"
+msgstr "პროდუქტის დამატება"

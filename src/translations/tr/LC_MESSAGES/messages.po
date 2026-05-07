@@ -299,3 +299,9 @@ msgstr "Düşüncelerinizi paylaşın..."
 
 msgid "About"
 msgstr "Hakkımızda"
+
+msgid "Images only!"
+msgstr "Sadece görseller!"
+
+msgid "Add Product"
+msgstr "Ürün Ekle"

@@ -236,6 +236,14 @@ def edit_product(product_id):
 @admin_required
 def delete_product(product_id):
     product = Product.query.get_or_404(product_id)
-    product.delete()
+
+    Review.query.filter_by(product_id=product_id).delete()
+    Favorite.query.filter_by(product_id=product_id).delete()
+
+    Image.query.filter_by(product_id=product_id).delete()
+
+    db.session.delete(product)
+    db.session.commit()
+
     flash('Product deleted.', 'info')
     return redirect(url_for('main.index'))
