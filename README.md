@@ -24,9 +24,6 @@ You can access the live version of ZYRA here: [https://zyra-fc2n.onrender.com](h
 * **Data Integrity:** Managed database schemas using **Alembic migrations**, ensuring reliable version control for database changes.
 * **Quality Assurance:** Developed comprehensive **unit tests using Pytest** to achieve high code coverage and minimize bugs during the development lifecycle.
 
-## 📦 Quick Start
-Ensure you have Docker and Docker Compose installed on your machine.
-
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/VasifMamedov/ZYRA.git](https://github.com/VasifMamedov/ZYRA.git)
